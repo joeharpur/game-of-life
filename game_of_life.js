@@ -12,23 +12,23 @@
     var next_gen;
     var start =  false;
     var generation = 0;
-    var cell_size;
-    var draw_speed;
+    var cell_size = 10;
+    var draw_speed = 50;
 
     document.addEventListener('DOMContentLoaded', init, false);
 
     function init() {    
         canvas = document.querySelector('canvas');
         context = canvas.getContext('2d');
-        form_element = document.querySelector('form');
+        // form_element = document.querySelector('form');
         width = canvas.width;
         height = canvas.height;
-        cell_size = document.getElementById("cell_size");
-        cell_size = cell_size.options[cell_size.selectedIndex].text;
-        console.log(cell_size);
-        draw_speed = document.getElementById("speed");
-        draw_speed = draw_speed.options[draw_speed.selectedIndex].text;
-        console.log(draw_speed);
+        // cell_size = document.getElementById("cell_size");
+        // cell_size = cell_size.options[cell_size.selectedIndex].text;
+        // console.log(cell_size);
+        // draw_speed = document.getElementById("speed");
+        // draw_speed = draw_speed.options[draw_speed.selectedIndex].text;
+        // console.log(draw_speed);
         curr_gen = [];
         next_gen = [];
         populate_grid(curr_gen);
@@ -36,7 +36,7 @@
         canvas.addEventListener('click', mouse_click, false);
         window.addEventListener('keydown', begin, false);
         window.addEventListener('keydown', end, false);
-        form_element.addEventListener('submit', init, false);
+        // form_element.addEventListener('submit', init, false);
 		clearInterval(interval_id);
         interval_id = window.setInterval(draw, draw_speed);
         
