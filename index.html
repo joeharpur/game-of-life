@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Game of Life</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="game_of_life.js"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Game Of Life</h1>
+        </header>
+        
+        <p>Click to place the seed cells and press the spacebar to begin evolution.<br>
+        Press escape to stop.<br>
+        Place a few cells close together to give them a higher survival chance.
+        </p>
+
+        <canvas id="canvas" width="1000" height="500">
+        </canvas>
+
+        <form>
+
+            <label for="cell_size">Cell Size: </label>
+            <select name="cell_size" id="cell_size">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <label for="speed">Speed: </label>
+            <select name="speed" id="speed">
+                <option value="very slow">Very Slow</option>
+                <option value="slow">Slow</option>
+                <option value="normal">Normal</option>
+                <option value="fast">Fast</option>
+                <option value="very fast">Very Fast</option>
+            </select>
+            <input type="submit" />
+        </form>
+
+    </body>
+</html>
