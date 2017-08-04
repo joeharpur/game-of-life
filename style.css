@@ -1,4 +1,7 @@
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 
 canvas {
     display: block;
@@ -7,4 +10,10 @@ canvas {
     background: white;
     border: 1px solid black;
 }
+
+h1, p:first-of-type {
+	text-align: center;
+}
+
+
 

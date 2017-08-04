@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title>Game of Life</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="game_of_life.js"></script>
 
     </head>
@@ -16,33 +17,22 @@
             <h1>Game Of Life</h1>
         </header>
         
-        <p>Click to place the seed cells and press the spacebar to begin evolution.<br>
-        Press escape to stop.<br>
+        <p>Click to place the seed cells and press the spacebar to begin evolution.
+        Press escape to stop.
         Place a few cells close together to give them a higher survival chance.
         </p>
 
-        <canvas id="canvas" width="1000" height="500">
+        <canvas id="canvas" width="1000" height="400">
         </canvas>
 
-        <form>
-
-            <label for="cell_size">Cell Size: </label>
-            <select name="cell_size" id="cell_size">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-            </select>
-            <label for="speed">Speed: </label>
-            <select name="speed" id="speed">
-                <option value="very slow">Very Slow</option>
-                <option value="slow">Slow</option>
-                <option value="normal">Normal</option>
-                <option value="fast">Fast</option>
-                <option value="very fast">Very Fast</option>
-            </select>
-            <input type="submit" />
-        </form>
+        <p>The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead, or "populated" or "unpopulated". Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:</p>
+        <ol>
+            <li>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
+            <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+        </ol>
+        <p>The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed—births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the preceding one). The rules continue to be applied repeatedly to create further generations.</p>
 
     </body>
 </html>
